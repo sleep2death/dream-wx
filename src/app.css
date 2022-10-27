@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply underline text-blue-500 visited:text-purple-500;
+}
+
+html, body {
+  @apply h-screen w-screen;
+}
