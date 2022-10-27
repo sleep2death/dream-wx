@@ -1,0 +1,9 @@
+{
+  "btn.generate": "DREAM",
+  "input.prompt.placeholder": "Input prompt...",
+  "dream": {
+    "steps": "steps",
+    "scale": "scale",
+    "seed": "seed"
+  }
+}

@@ -1,6 +1,7 @@
 <script>
   import wx from "weixin-js-sdk";
   import TabBar from "../lib/components/tabbar.svelte";
+  import "../i18n";
 
   export let data;
   if (!data.user.initialized) {

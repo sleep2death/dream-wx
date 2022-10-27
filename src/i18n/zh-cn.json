@@ -1,0 +1,9 @@
+{
+  "btn.generate": "生成",
+  "input.prompt.placeholder": "输入提示词...",
+  "dream": {
+    "steps": "迭代次数",
+    "scale": "引导权重",
+    "seed": "随机种子"
+  }
+}

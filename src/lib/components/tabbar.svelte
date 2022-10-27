@@ -17,7 +17,7 @@
 	let size = "28";
 
 	$: selected = arr.indexOf($page.url.pathname);
-	$: console.log($page.url.pathname);
+	// $: console.log($page.url.pathname);
 </script>
 
 <div class="tabbar">
@@ -60,6 +60,6 @@
 
 <style>
 	.tabbar {
-		@apply flex flex-row items-center px-6 text-lg h-12 border-t border-t-neutral-400 justify-between fixed bottom-0 w-full mb-4;
+		@apply flex flex-row items-center px-6 text-lg h-12 border-t border-t-neutral-200 justify-between fixed bottom-0 w-full mb-4;
 	}
 </style>
