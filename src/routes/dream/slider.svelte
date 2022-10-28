@@ -1,9 +1,35 @@
 <script>
   import { format } from "svelte-i18n";
+  import _ from "lodash";
+
   export let label;
   export let value;
+
   export let max;
   export let min;
+
+  let invalid = "";
+  export const validator = {
+    validate() {
+      invalid = "";
+      if (!_.isInteger(value)) {
+        invalid = $format("invalid.not.int");
+        return false;
+      }
+
+      if (value > max) {
+        invalid = $format("invalid.gt.max", { values: { value: max } });
+        return false;
+      }
+
+      if (value < min) {
+        invalid = $format("invalid.lt.min", { values: { value: min } });
+        return false;
+      }
+      return true;
+    },
+    reset() {},
+  };
 </script>
 
 <div class="flex justify-center h-12 w-full">
@@ -18,6 +44,11 @@
     />
   </div>
 </div>
+{#if invalid !== ""}
+  <span class="text-sm text-red-500 px-1" style="margin-top:0px;"
+    >{invalid}</span
+  >
+{/if}
 
 <style>
   .left {
